@@ -55,6 +55,7 @@ bcftools view ALL.wgs.mergedSV.v8.20130502.svs.genotypes.vcf.gz -r 1:13000000-14
 ```
 
 Subset VCF to many regions using a BED file or similar file
+
 ```
 # use a BED file (must end with .bed and be 0-base positions)
 bcftools view ALL.wgs.mergedSV.v8.20130502.svs.genotypes.vcf.gz -R regions.bed
@@ -86,8 +87,7 @@ bcftools view ALL.wgs.mergedSV.v8.20130502.svs.genotypes.vcf.gz -e'GT~"\."'
 ## in other words, one person is 0/1 and the rest are 0/0
 
 bcftools view ALL.wgs.mergedSV.v8.20130502.svs.genotypes.vcf.gz -i'AC==1'
-
-
+```
 
 ----------------
 
@@ -101,11 +101,9 @@ Common operations include
 
 ```
 bcftools query -f'%CHROM\t%POS0\t%INFO/END\t%INFO/SVTYPE\n' ALL.wgs.mergedSV.v8.20130502.svs.genotypes.vcf.gz
-```
 
 # only look at DEL
 bcftools query -f'%CHROM\t%POS0\t%INFO/END\t%INFO/SVTYPE\n' -i'INFO/SVTYPE=="DEL"' ALL.wgs.mergedSV.v8.20130502.svs.genotypes.vcf.gz
-
 
 # get genotypes for each sample, one-per-line
 bcftools query -f'[%CHROM\t%POS0\t%INFO/END\t%INFO/SVTYPE\t%SAMPLE\t%GT\n]' -i'INFO/SVTYPE=="DEL"' ALL.wgs.mergedSV.v8.20130502.svs.genotypes.vcf.gz
