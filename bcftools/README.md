@@ -1,4 +1,4 @@
-# bcftools
+# [bcftools tutorial](https://youtu.be/9qc7eK4o_2M)
 -----------
 
 [bcftools](https://samtools.github.io/bcftools/bcftools.html)
