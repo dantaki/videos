@@ -9,8 +9,8 @@ Sudmant et al. 2015
 [1000 Genomes SV VCF](ftp://ftp.ncbi.nlm.nih.gov/1000genomes/ftp/phase3/integrated_sv_map/ALL.wgs.integrated_sv_map_v2.20130502.svs.genotypes.vcf.gz)
 [1000 Genomes SV VCF Tabix index](ftp://ftp.ncbi.nlm.nih.gov/1000genomes/ftp/phase3/integrated_sv_map/ALL.wgs.integrated_sv_map_v2.20130502.svs.genotypes.vcf.gz.tbi)
 
-* [view]()
-* [query]()
+* [view](https://github.com/dantaki/videos/tree/master/bcftools#view)
+* [query](https://github.com/dantaki/videos/tree/master/bcftools#query)
 
 ------------------------
 
@@ -101,9 +101,11 @@ Common operations include
 
 ```
 bcftools query -f'%CHROM\t%POS0\t%INFO/END\t%INFO/SVTYPE\n' ALL.wgs.mergedSV.v8.20130502.svs.genotypes.vcf.gz
+```
 
 # only look at DEL
 bcftools query -f'%CHROM\t%POS0\t%INFO/END\t%INFO/SVTYPE\n' -i'INFO/SVTYPE=="DEL"' ALL.wgs.mergedSV.v8.20130502.svs.genotypes.vcf.gz
+
 
 # get genotypes for each sample, one-per-line
 bcftools query -f'[%CHROM\t%POS0\t%INFO/END\t%INFO/SVTYPE\t%SAMPLE\t%GT\n]' -i'INFO/SVTYPE=="DEL"' ALL.wgs.mergedSV.v8.20130502.svs.genotypes.vcf.gz
@@ -115,7 +117,8 @@ bcftools query -f'[%CHROM\t%POS0\t%INFO/END\t%INFO/SVTYPE\t%SAMPLE\t%GT\n]' -i'G
 bcftools query -f'[%CHROM\t%POS0\t%INFO/END\t%INFO/SVTYPE\t%SAMPLE\t%GT\n]' -i'GT=="AA"' -s NA12878 ALL.wgs.mergedSV.v8.20130502.svs.genotypes.vcf.gz
 
 # same as above, but you might need to change | for / depending on your VCF
-bcftools query -f'[%CHROM\t%POS0\t%INFO/END\t%INFO/SVTYPE\t%SAMPLE\t%GT\n]' -i'GT=="1|1"' -s NA12878 ALL.wgs.mergedSV.v8.20130502.svs.genotypes.vcf.gz | les
+bcftools query -f'[%CHROM\t%POS0\t%INFO/END\t%INFO/SVTYPE\t%SAMPLE\t%GT\n]' -i'GT=="1|1"' -s NA12878 ALL.wgs.mergedSV.v8.20130502.svs.genotypes.vcf.gz
+
 ```
 
 * print out all the sample names
