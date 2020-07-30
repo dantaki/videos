@@ -8,7 +8,8 @@
 [SegDups from UCSC Table Browser: Repeat Track](https://genome.ucsc.edu/cgi-bin/hgTables) 
 Or use the one in the repo
 
-Gencode v34 hg19 GTF: ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_34/GRCh37_mapping/gencode.v34lift37.annotation.gtf.gz
+Gencode v34 hg19 GTF: 
+  * ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_34/GRCh37_mapping/gencode.v34lift37.annotation.gtf.gz
 
 ---------
 
