@@ -1,6 +1,8 @@
 # bedtools
 ----------------
 
+## [Video](https://www.youtube.com/watch?v=Cf1xd0GRxu4)
+
 ## Resources:
 
 [Broad Bundle b37 1kgp Omni2.5 VCF](https://console.cloud.google.com/storage/browser/_details/gcp-public-data--broad-references/hg19%2Fv0%2F1000G_omni2.5.b37.vcf.gz)
