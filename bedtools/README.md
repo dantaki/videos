@@ -18,3 +18,5 @@ Gencode v34 hg19 GTF:
 [Bedtools](https://bedtools.readthedocs.io/en/latest/)
 
 -------
+
+## [Tutorial Script](https://github.com/dantaki/videos/blob/master/bedtools/tut.sh)
